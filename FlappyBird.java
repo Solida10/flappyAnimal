@@ -124,7 +124,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
         placePipeTimer = new Timer(1600, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                placePipes();
+                PipePlacement();
             }
         });
         placePipeTimer.start();
@@ -134,7 +134,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
         System.out.println("Game loop");
     }
 // Pipe Placement + Gap between pipe
-    void placePipes(){
+    void PipePlacement(){
         int openingSpace = boardHeight / 4 + random.nextInt(40)- 20;
         int minPipeY = -pipeHeight + 100;
         int maxPipeY = -100;
